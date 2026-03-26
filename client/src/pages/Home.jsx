@@ -28,7 +28,7 @@ export default function Home() {
           fontWeight: 800, 
           lineHeight: 1.2, 
           marginBottom: "1.5rem",
-          background: "linear-gradient(to right, #ffffff, #94a3b8)",
+          background: "linear-gradient(to right, #ffffff, #ffffff)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent"
         }}>
@@ -37,7 +37,7 @@ export default function Home() {
         
         <p style={{ 
           fontSize: "1.25rem", 
-          color: "var(--color-text-muted)", 
+          color: "white", 
           marginBottom: "3rem",
           lineHeight: 1.6,
           maxWidth: "600px",
@@ -72,7 +72,7 @@ export default function Home() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
           </div>
           <h3 style={{ fontSize: "1.25rem", margin: "0 0 0.5rem 0" }}>High Accuracy Models</h3>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, fontSize: "0.9rem" }}>
+          <p style={{ color: "white", margin: 0, fontSize: "0.9rem" }}>
             Trained on extensive datasets (ISIC, HAM10000) using state-of-the-art CNNs like EfficientNet and ResNet.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           </div>
           <h3 style={{ fontSize: "1.25rem", margin: "0 0 0.5rem 0" }}>Interpretability</h3>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, fontSize: "0.9rem" }}>
+          <p style={{ color: "white", margin: 0, fontSize: "0.9rem" }}>
             Grad-CAM heatmaps highlight precise lesion regions influencing predictions, breaking the black-box AI model.
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <h3 style={{ fontSize: "1.25rem", margin: "0 0 0.5rem 0" }}>Confidence Calibration</h3>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, fontSize: "0.9rem" }}>
+          <p style={{ color: "white", margin: 0, fontSize: "0.9rem" }}>
             Ensures reliable confidence scores, reducing overconfident false predictions crucial for medical applications.
           </p>
         </div>

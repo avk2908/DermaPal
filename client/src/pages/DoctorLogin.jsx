@@ -22,14 +22,14 @@ export default function DoctorLogin() {
           <h2 style={{ fontSize: "1.875rem", fontWeight: "bold", margin: "0 0 0.5rem 0", color: "white" }}>
             Doctor Portal
           </h2>
-          <p style={{ color: "var(--color-text-muted)", margin: 0 }}>
+          <p style={{ color: "white", margin: 0 }}>
             Secure access for clinical personnel
           </p>
         </div>
 
         <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: "1.25rem", position: "relative", zIndex: 1 }}>
           <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Professional Email</label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Professional Email</label>
             <input 
               type="email" 
               className="glass-input" 
@@ -40,7 +40,7 @@ export default function DoctorLogin() {
             />
           </div>
           <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Password / PIN</label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Password / PIN</label>
             <input 
               type="password" 
               className="glass-input" 
@@ -55,7 +55,7 @@ export default function DoctorLogin() {
           </button>
         </form>
         
-        <div style={{ marginTop: "2rem", textAlign: "center", fontSize: "0.875rem", color: "var(--color-text-muted)", position: "relative", zIndex: 1 }}>
+        <div style={{ marginTop: "2rem", textAlign: "center", fontSize: "0.875rem", color: "white", position: "relative", zIndex: 1 }}>
           Mock Auth: Enter any credentials to proceed.
         </div>
       </div>

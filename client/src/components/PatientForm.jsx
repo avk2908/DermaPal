@@ -66,7 +66,7 @@ export default function PatientForm() {
             ✓
           </div>
           <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>Submitted Successfully</h2>
-          <p style={{ color: "var(--color-text-muted)", marginBottom: "2rem" }}>
+          <p style={{ color: "white", marginBottom: "2rem" }}>
             Your details and dermatoscopic image have been sent for AI analysis. A doctor will review your results shortly.
           </p>
           <button className="btn-secondary" onClick={() => { setSubmitted(false); setImage(null); setPreview(null); setSymptoms(""); }}>
@@ -88,17 +88,17 @@ export default function PatientForm() {
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <div style={{ flex: 1 }}>
-              <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Full Name</label>
+              <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Full Name</label>
               <input type="text" className="glass-input" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)} required />
             </div>
             <div style={{ width: "120px" }}>
-              <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Age</label>
+              <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Age</label>
               <input type="number" className="glass-input" placeholder="30" value={age} onChange={(e) => setAge(e.target.value)} required />
             </div>
           </div>
 
           <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Symptoms Description</label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Symptoms Description</label>
             <textarea 
               className="glass-input" 
               placeholder="Please describe any itching, pain, or changes in the lesion..."
@@ -112,7 +112,7 @@ export default function PatientForm() {
 
           {/* Image Upload Area */}
           <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Lesion Image</label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Lesion Image</label>
             
             <div style={{
               border: "2px dashed rgba(255, 255, 255, 0.2)",
@@ -138,16 +138,16 @@ export default function PatientForm() {
               {preview ? (
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                   <img src={preview} alt="Preview" style={{ maxHeight: "200px", borderRadius: "0.5rem", objectFit: "contain", marginBottom: "1rem" }} />
-                  <span style={{ fontSize: "0.875rem", color: "#94a3b8" }}>Click or drag to change image</span>
+                  <span style={{ fontSize: "0.875rem", color: "#ffffff" }}>Click or drag to change image</span>
                 </div>
               ) : (
-                <div style={{ color: "#94a3b8" }}>
+                <div style={{ color: "#ffffff" }}>
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ margin: "0 auto 1rem auto" }}>
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                     <circle cx="8.5" cy="8.5" r="1.5"></circle>
                     <polyline points="21 15 16 10 5 21"></polyline>
                   </svg>
-                  <p style={{ margin: "0 0 0.5rem 0", fontSize: "1rem", color: "#e2e8f0" }}>Drag & Drop your image here</p>
+                  <p style={{ margin: "0 0 0.5rem 0", fontSize: "1rem", color: "#ffffff" }}>Drag & Drop your image here</p>
                   <p style={{ margin: 0, fontSize: "0.875rem" }}>or click to browse from your device</p>
                 </div>
               )}

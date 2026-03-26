@@ -68,7 +68,7 @@ export default function DoctorDashboard() {
       case "high": return { bg: "rgba(239, 68, 68, 0.2)", color: "#f87171" };
       case "medium": return { bg: "rgba(245, 158, 11, 0.2)", color: "#fbbf24" };
       case "low": return { bg: "rgba(16, 185, 129, 0.2)", color: "#34d399" };
-      default: return { bg: "rgba(148, 163, 184, 0.2)", color: "#94a3b8" };
+      default: return { bg: "rgba(148, 163, 184, 0.2)", color: "#ffffff" };
     }
   };
 
@@ -79,7 +79,7 @@ export default function DoctorDashboard() {
     
     return (
       <div style={{ marginTop: "0.5rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.25rem", color: "#cbd5e1" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.25rem", color: "#ffffff" }}>
           <span>Confidence Score</span>
           <span style={{ color }}>{confidence ? confidence.toFixed(1) : "0.0"}%</span>
         </div>
@@ -100,7 +100,7 @@ export default function DoctorDashboard() {
           <h2 style={{ fontSize: "2.25rem", fontWeight: "bold", margin: "0 0 0.5rem 0", background: "linear-gradient(to right, #34d399, #3b82f6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             Clinical Overview
           </h2>
-          <p style={{ color: "var(--color-text-muted)", margin: 0 }}>Review AI predictions, Grad-CAM heatmaps, and patient confident scores.</p>
+          <p style={{ color: "white", margin: 0 }}>Review AI predictions, Grad-CAM heatmaps, and patient confident scores.</p>
         </div>
         
         <button onClick={fetchPatients} className="btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
@@ -119,7 +119,7 @@ export default function DoctorDashboard() {
               background: activeTab === tab ? "rgba(255,255,255,0.1)" : "transparent",
               border: "1px solid",
               borderColor: activeTab === tab ? "rgba(255,255,255,0.2)" : "transparent",
-              color: activeTab === tab ? "white" : "var(--color-text-muted)",
+              color: activeTab === tab ? "white" : "white",
               padding: "0.5rem 1.25rem",
               borderRadius: "999px",
               cursor: "pointer",
@@ -133,7 +133,7 @@ export default function DoctorDashboard() {
       </div>
 
       {loading ? (
-        <div style={{ display: "flex", justifyContent: "center", padding: "4rem", color: "var(--color-text-muted)" }}>
+        <div style={{ display: "flex", justifyContent: "center", padding: "4rem", color: "white" }}>
           <svg className="animate-spin" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>
           <span style={{ marginLeft: "1rem" }}>Syncing Database...</span>
         </div>
@@ -144,7 +144,7 @@ export default function DoctorDashboard() {
           gap: "2rem" 
         }}>
           {filteredPatients.length === 0 ? (
-            <div style={{ gridColumn: "1 / -1", textAlign: "center", padding: "4rem", color: "var(--color-text-muted)", background: "rgba(0,0,0,0.2)", borderRadius: "1rem", border: "1px dashed rgba(255,255,255,0.1)" }}>
+            <div style={{ gridColumn: "1 / -1", textAlign: "center", padding: "4rem", color: "white", background: "rgba(0,0,0,0.2)", borderRadius: "1rem", border: "1px dashed rgba(255,255,255,0.1)" }}>
               No cases found matching your criteria.
             </div>
           ) : (
@@ -156,9 +156,9 @@ export default function DoctorDashboard() {
                   {/* Header */}
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                     <div>
-                      <div style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", marginBottom: "0.25rem", fontFamily: "monospace" }}>{p.id || `P-${Math.floor(Math.random()*90000)+10000}`}</div>
+                      <div style={{ fontSize: "0.75rem", color: "white", marginBottom: "0.25rem", fontFamily: "monospace" }}>{p.id || `P-${Math.floor(Math.random()*90000)+10000}`}</div>
                       <h3 style={{ margin: 0, fontSize: "1.25rem", color: "white" }}>{p.name || "Anonymous Patient"}</h3>
-                      <div style={{ fontSize: "0.875rem", color: "var(--color-text-muted)", marginTop: "0.25rem" }}>
+                      <div style={{ fontSize: "0.875rem", color: "white", marginTop: "0.25rem" }}>
                         Age: {p.age || "--"} • {new Date(p.date).toLocaleDateString()}
                       </div>
                     </div>
@@ -177,25 +177,25 @@ export default function DoctorDashboard() {
 
                   {/* Prediction & Confidence */}
                   <div style={{ background: "rgba(0,0,0,0.25)", padding: "1rem", borderRadius: "0.75rem", border: "1px solid rgba(255,255,255,0.05)" }}>
-                    <div style={{ fontSize: "0.875rem", color: "var(--color-text-muted)", marginBottom: "0.25rem" }}>AI Prediction</div>
-                    <div style={{ fontSize: "1.125rem", fontWeight: 600, color: "#e2e8f0" }}>{p.prediction || "Pending Analysis"}</div>
+                    <div style={{ fontSize: "0.875rem", color: "white", marginBottom: "0.25rem" }}>AI Prediction</div>
+                    <div style={{ fontSize: "1.125rem", fontWeight: 600, color: "#ffffff" }}>{p.prediction || "Pending Analysis"}</div>
                     {renderProgressBar(p.confidence)}
                   </div>
 
                   {/* Heatmap Visual (Mocked representation) */}
                   <div style={{ display: "flex", gap: "1rem" }}>
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", marginBottom: "0.5rem" }}>Original Lesion</div>
+                      <div style={{ fontSize: "0.75rem", color: "white", marginBottom: "0.5rem" }}>Original Lesion</div>
                       <div style={{ height: "120px", background: "#1e293b", borderRadius: "0.5rem", position: "relative", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         {p.image ? (
                           <img src={p.image.startsWith('data:') ? p.image : `data:image/jpeg;base64,${p.image}`} alt="Lesion" style={{ width: "100%", height: "100%", objectFit: "cover" }} onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
                         ) : null}
-                        <div style={{ display: p.image ? 'none' : 'block', color: "#475569" }}>No Image</div>
+                        <div style={{ display: p.image ? 'none' : 'block', color: "#ffffff" }}>No Image</div>
                       </div>
                     </div>
                     
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", marginBottom: "0.5rem", display: "flex", justifyContent: "space-between" }}>
+                      <div style={{ fontSize: "0.75rem", color: "white", marginBottom: "0.5rem", display: "flex", justifyContent: "space-between" }}>
                         <span>Grad-CAM Heatmap</span>
                         {p.hasHeatmap && <span style={{ color: "#34d399", fontSize: "0.65rem", padding: "0 4px", background: "rgba(52,211,153,0.1)", borderRadius: "4px" }}>Available</span>}
                       </div>
@@ -211,7 +211,7 @@ export default function DoctorDashboard() {
                         {p.hasHeatmap ? (
                           <div style={{ position: "absolute", inset: 0, opacity: 0.6, backgroundImage: "radial-gradient(circle at 50% 50%, rgba(239,68,68,0.8) 0%, rgba(245,158,11,0.5) 40%, rgba(59,130,246,0.2) 70%, transparent 100%)", filter: "blur(8px)" }}></div>
                         ) : (
-                          <div style={{ color: "#475569" }}>N/A</div>
+                          <div style={{ color: "#ffffff" }}>N/A</div>
                         )}
                       </div>
                     </div>
@@ -219,8 +219,8 @@ export default function DoctorDashboard() {
 
                   {/* Symptoms */}
                   <div>
-                    <div style={{ fontSize: "0.875rem", color: "var(--color-text-muted)", marginBottom: "0.25rem" }}>Clinical Notes</div>
-                    <div style={{ fontSize: "0.875rem", color: "#cbd5e1", lineHeight: 1.5, background: "rgba(255,255,255,0.03)", padding: "0.75rem", borderRadius: "0.5rem" }}>
+                    <div style={{ fontSize: "0.875rem", color: "white", marginBottom: "0.25rem" }}>Clinical Notes</div>
+                    <div style={{ fontSize: "0.875rem", color: "#ffffff", lineHeight: 1.5, background: "rgba(255,255,255,0.03)", padding: "0.75rem", borderRadius: "0.5rem" }}>
                       {p.symptoms || "No clinical symptoms reported by patient."}
                     </div>
                   </div>

@@ -19,14 +19,14 @@ export default function PatientLogin() {
           <h2 style={{ fontSize: "1.875rem", fontWeight: "bold", margin: "0 0 0.5rem 0", color: "white" }}>
             Patient Portal
           </h2>
-          <p style={{ color: "var(--color-text-muted)", margin: 0 }}>
+          <p style={{ color: "white", margin: 0 }}>
             Sign in to access your dashboard
           </p>
         </div>
 
         <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Email Address</label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Email Address</label>
             <input 
               type="email" 
               className="glass-input" 
@@ -37,7 +37,7 @@ export default function PatientLogin() {
             />
           </div>
           <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#e2e8f0" }}>Password</label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", color: "#ffffff" }}>Password</label>
             <input 
               type="password" 
               className="glass-input" 
@@ -52,7 +52,7 @@ export default function PatientLogin() {
           </button>
         </form>
         
-        <div style={{ marginTop: "2rem", textAlign: "center", fontSize: "0.875rem", color: "var(--color-text-muted)" }}>
+        <div style={{ marginTop: "2rem", textAlign: "center", fontSize: "0.875rem", color: "white" }}>
           Mock Auth: Enter any credentials to proceed.
         </div>
       </div>
